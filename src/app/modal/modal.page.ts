@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ModalController } from '@ionic/angular'
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.page.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalPage implements OnInit {
 
-  constructor() { }
+  constructor(
+  	public mc:ModalController
+  	) { }
 
   ngOnInit() {
+  }
+  close(){//to close modal
+  	this.mc.dismiss() //close modal or modal hide
   }
 
 }

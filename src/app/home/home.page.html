@@ -7,9 +7,15 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-	<ion-button (click)="firealert()">
-		fire alert
-	</ion-button>
+	
+	
+	<!--  ionic button with HTML direct link -->
+	  <ion-button color="secondary" expand="block"
+	  routerLink="/contact"
+	  routerDirection="forward">
+
+	  	contact html routing
+	  </ion-button>
   
   
 
@@ -22,10 +28,18 @@
 	  <ion-card-content>
 	    <img src="assets/images/logo.png">
 
-	  <!--  ionic button -->
-	  <ion-button color="secondary" expand="block">
-	  	Ionic button sample
-	  </ion-button>
+	  <ion-button (click)="firealert()"
+	  expand="block">
+		simple fire alert
+	</ion-button>
+	<ion-button (click)="openmodal()"
+	expand="block">
+		open modal
+	</ion-button>
+	<ion-button (click)="gotocontact()"
+	expand="block">
+		contact using routing
+	</ion-button><br>
   </ion-card-content>
 </ion-card>
 
