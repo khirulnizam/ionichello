@@ -1,0 +1,7 @@
+{
+  "name": "ionichello",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
