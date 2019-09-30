@@ -20,10 +20,10 @@
   
 
   <ion-card>
-  <ion-card-header>
-    <ion-card-subtitle>Welcome FSTM</ion-card-subtitle>
-    <ion-card-title>fstm.kuis.edu.my</ion-card-title>
-  </ion-card-header>
+	  <ion-card-header>
+	    <ion-card-subtitle>Welcome FSTM</ion-card-subtitle>
+	    <ion-card-title>fstm.kuis.edu.my</ion-card-title>
+	  </ion-card-header>
 
 	  <ion-card-content>
 	    <img src="assets/images/logo.png">
@@ -40,7 +40,46 @@
 	expand="block">
 		contact using routing
 	</ion-button><br>
-  </ion-card-content>
+
+	<!-- input boxes calculate -->
+	<ion-item>
+		<ion-input type="text"
+		placeholder="Insert num1..."
+		[(ngModel)]="calc.numberobj.num1">
+		</ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-input type="text"
+		placeholder="Insert num2..."
+		[(ngModel)]="calc.numberobj.num2">
+		</ion-input>
+	</ion-item>
+
+	<ion-button routerLink="/second"
+		routerDirection="forward"
+		color="success">
+			Add
+	</ion-button>
+	<!-- <ion-button 
+		color="warning">
+			-Subtract-
+	</ion-button> -->
+  
+
+	<!-- input box -->
+	<ion-item>
+		<ion-input type="text"
+		placeholder="Insert yrname..."
+		[(ngModel)]="name">
+		</ion-input>
+	</ion-item>
+	<ion-button (click)="sendnametocontact()"
+		color="success"
+		expand="block">
+			contact using routing with variable
+	</ion-button><br>
+
+</ion-card-content>
 </ion-card>
 
 
