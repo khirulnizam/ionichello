@@ -11,7 +11,8 @@ import { CalculateService } from '../service/calculate.service';
 })
 export class HomePage {
 	public name:any;
-
+  public logo:any;
+  animals=['kucing','lembu','itik','ayam'];
 
   constructor(
   	//rename NavController object
@@ -22,7 +23,14 @@ export class HomePage {
 
   //send var name
   sendnametocontact(){
-  	this.nav.navigateForward('contact/'+this.name);
+    if (this.name=="cat"){
+      alert("MEOW");
+    }
+    else if (this.name=="dog"){
+      alert("WOOF");
+    }else{
+  	  this.nav.navigateForward('contact/'+this.name);
+    }
   }
 
   //navigate gotocontact
@@ -42,6 +50,18 @@ export class HomePage {
   	//firtly automatically executed
   	//main()
   	//alert("Hello");
+    for(var x=0;x<this.animals.length;x++){//trace array
+      console.log(x);
+      console.log(this.animals[x]);
+    }
+    for(let item of this.animals){
+      console.log(item);
+    }
+
+    //loop
+    this.animals.forEach(res=>{
+      console.log(res);
+    })
   }
 
 

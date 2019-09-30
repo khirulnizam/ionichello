@@ -19,14 +19,23 @@
   
   
 
-  <ion-card>
+  <ion-card color="white">
 	  <ion-card-header>
 	    <ion-card-subtitle>Welcome FSTM</ion-card-subtitle>
 	    <ion-card-title>fstm.kuis.edu.my</ion-card-title>
 	  </ion-card-header>
 
 	  <ion-card-content>
-	    <img src="assets/images/logo.png">
+	  	<ion-input placeholder="choose kuis or fstm logo..."
+	  	[(ngModel)]="logo" type="text"
+	  	>
+	  	</ion-input>
+	  	<div *ngIf='logo=="fstm"'>
+	    	<img src="assets/images/logo.png">
+		</div>
+		<div *ngIf='logo=="kuis"'>
+	    	<img src="assets/images/logokuis.png">
+		</div>
 
 	  <ion-button (click)="firealert()"
 	  expand="block">
@@ -81,6 +90,14 @@
 
 </ion-card-content>
 </ion-card>
+
+
+<!-- list from array -->
+<ion-list>
+	<ion-item *ngFor="let item of animals; let i=index">
+		{{i+1}}. {{item}}
+	</ion-item>
+</ion-list>
 
 
 </ion-content>
