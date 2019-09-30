@@ -12,7 +12,7 @@ export class HomePage {
   ionViewWillEnter(){
   	//firtly automatically executed
   	//main()
-  	alert("Hello");
+  	//alert("Hello");
   }
 
   //create function to display alert()
